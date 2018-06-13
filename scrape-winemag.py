@@ -34,7 +34,7 @@ class Scraper():
         self.session = requests.Session()
         self.start_time = time.time()
         self.cross_process_review_count = 0
-        self.estimated_total_reviews = (pages_to_scrape[1] + 1 - pages_to_scrape[0]) * 30
+        self.estimated_total_reviews = (pages_to_scrape[1] + 1 - pages_to_scrape[0]) * 200
 
         if num_jobs > 1:
             self.multiprocessing = True
