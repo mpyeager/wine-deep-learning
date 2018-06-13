@@ -27,7 +27,7 @@ APPELLATION_FORMAT_2 = 3
 class Scraper():
     """Scraper for Winemag.com to collect wine reviews"""
 
-    def __init__(self, pages_to_scrape=(1,1), num_jobs=20, clear_old_data=True):
+    def __init__(self, pages_to_scrape=(1,1), num_jobs=100, clear_old_data=True):
         self.pages_to_scrape = pages_to_scrape
         self.num_jobs = num_jobs
         self.clear_old_data = clear_old_data
