@@ -27,14 +27,14 @@ APPELLATION_FORMAT_2 = 3
 class Scraper():
     """Scraper for Winemag.com to collect wine reviews"""
 
-    def __init__(self, pages_to_scrape=(1,1), num_jobs=1, clear_old_data=True):
+    def __init__(self, pages_to_scrape=(1,1), num_jobs=10, clear_old_data=True):
         self.pages_to_scrape = pages_to_scrape
         self.num_jobs = num_jobs
         self.clear_old_data = clear_old_data
         self.session = requests.Session()
         self.start_time = time.time()
         self.cross_process_review_count = 0
-        self.estimated_total_reviews = (pages_to_scrape[1] + 1 - pages_to_scrape[0]) * 200
+        self.estimated_total_reviews = (pages_to_scrape[1] + 1 - pages_to_scrape[0]) * 30
 
         if num_jobs > 1:
             self.multiprocessing = True
